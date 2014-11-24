@@ -1,48 +1,83 @@
 $newline never
-\<!doctype html>
-\<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-\<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-\<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-\<!--[if gt IE 8]><!-->
-<html class="no-js" lang="en"> <!--<![endif]-->
+
+<!DOCTYPE html>
+
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-
-        <title>#{pageTitle pc}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>#{pageTitle pc}    
 
-        ^{pageHead pc}
+        <link href=@{StaticR css_bootstrap_min_css} rel="stylesheet"/>    
+        <link href=@{StaticR css_clean_blog_min_css} rel="stylesheet">
 
-        \<!--[if lt IE 9]>
-        \<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        \<![endif]-->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-        <script>
-          document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
     <body>
-        <div class="container">
-            <header>
-            <div id="main" role="main">
-              ^{pageBody pc}
-            <footer>
-                #{extraCopyright $ appExtra $ settings master}
+        <!-- 导航 -->
+        <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">
+                    <span class="icon-bar">
+                    <span class="icon-bar">
+                    <span class="icon-bar">
+                <a class="navbar-brand" href="index.html">Start Bootstrap
 
-        $maybe analytics <- extraAnalytics $ appExtra $ settings master
-            <script>
-              if(!window.location.href.match(/localhost/)){
-                window._gaq = [['_setAccount','#{analytics}'],['_trackPageview'],['_trackPageLoadTime']];
-                (function() {
-                \  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                \  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                \  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-                })();
-              }
-        \<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.  chromium.org/developers/how-tos/chrome-frame-getting-started -->
-        \<!--[if lt IE 7 ]>
-            <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js">
-            <script>
-                window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
-        \<![endif]-->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="index.html">Home
+                        <li>
+                            <a href="index.html">About
+                        <li>
+                            <a href="index.html">Sample Post
+                        <li>
+                            <a href="index.html">Contact
+
+        <header class="intro-header" style="background-image: url('@{StaticR img_home_bg_jpg}')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div class="site-heading">
+                            <h1>Clean Blog
+                            <hr class="small">
+                            <span class="subheading">A Clean Blog Theme by Start Bootstrap
+        <!-- Main Content -->
+        <div class="container">
+            ^{pageBody pc}
+
+
+        <hr>
+
+        <!--Footer -->
+        <footer>
+            <div.container>
+                <div.row>
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <ul.list-inline.text-center>
+                            <li>
+                                <a href="#">
+                                    <span.fa-stack.fa-lg>
+                                        <i.fa.fa-circle.fa-stack-2x>
+                                        <i.fa.fa-twitter.fa-stack-1x.fa-inverse>
+                                <a href="#">
+                                    <span.fa-stack.fa-lg>
+                                        <i.fa.fa-circle.fa-stack-2x>
+                                        <i.fa.fa-facebook.fa-stack-1x.fa-inverse>
+                                <a href="#">
+                                    <span.fa-stack.fa-lg>
+                                        <i.fa.fa-circle.fa-stack-2x>
+                                        <i.fa.fa-github.fa-stack-1x.fa-inverse>
+                        <p.copyright.text-muted>Copyright &copy; Your Website 2014
+        <script src=@{StaticR js_jquery_js}>
+        <script src=@{StaticR js_bootstrap_min_js}>
