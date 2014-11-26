@@ -1,0 +1,74 @@
+$newline never
+
+$doctype 5
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>#{pageTitle pc}
+
+    <link href=@{StaticR css_bootstrap_min_css} rel="stylesheet">
+    <link href=@{StaticR css_metisMenu_min_css} rel="stylesheet">
+    <link href=@{StaticR css_timeline_css} rel="stylesheet">
+    <link href=@{StaticR css_sb_admin_2_css} rel="stylesheet">
+    <link href=@{StaticR css_morris_css} rel="stylesheet">
+    <link href=@{StaticR css_font_awesome_min_css} rel="stylesheet">
+<body>
+    <div #wrapper>
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span .sr-only>Toggle navigation
+                    <span .icon-bar>
+                    <span .icon-bar>
+                    <span .icon-bar>
+                <a .navbar-brand href="index.html">SB Admin v2.0
+
+            <ul .nav .navbar-top-links .navbar-right>
+                <li .dropdown>
+                    <a .dropdown-toggle data-toggle="dropdown" href="#">
+                        <i .fa .fa-envelope .fa-fw>
+                        <i .fa .fa-caret-down>
+                    <ul .dropdown-menu .dropdown-messages>
+                        <li>
+                            <a href="#"> 
+                                <div>
+                                    <strong>Wade Xing
+                                    <span .pull-right .text-muted>
+                                        <em>昨天
+                       <li .divider>				
+                       <li>
+                           <a .text-center href="#">
+                               <strong> Read All Messages
+                               <i class="fa fa-angle-right">
+
+            <div .navbar-default .sidebar role="navigation">
+                <div .sidebar-nav .navbar-collapse>
+                    <ul .nav #side-menu>
+                        <li .sidebar-search>
+                            <div .input-group .custom-search-form>
+                                <input type="text" .form-control placeholder="Search...">
+                                <span .input-group-btn>
+                                    <button .btn .btn-default type="button">
+                                        <i .fa .fa-search>
+                       <li>
+                           <a href="index.html">
+                               <i .fa .fa-dashboard .fa-fw>
+                               Dashboard
+                       <li>
+                           <a href=@{PostR}>
+                               <i .fa .fa-edit .fa-fw>
+                               New Post
+                       <li>
+                          <a href=@{PostsR}>
+                               <i .fa .fa-table .fa-fw>			  
+                               Posts
+
+        ^{pageBody pc}
+
+        <script src=@{StaticR js_jquery_js}>
+        <script src=@{StaticR js_bootstrap_min_js}>
+        <script src=@{StaticR js_metisMenu_min_js}>

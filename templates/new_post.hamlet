@@ -1,4 +1,22 @@
-<div class="panel panel-info">
-    <div class="panel-heading">
-        <h3 class="panel-title">Write A New Post
-    <div class="panel-body">
+<div #page-wrapper>
+    <div .row>
+        <div .col-lg-12>
+            <h1 class="page-header">Post
+
+    <div .row>
+        <div .col-lg-12>
+            <div class="panel panel-default">
+                <div class="panel-heading">New Post
+
+                <div .panel-body>
+                    <div .row>
+                        <div .col-lg-6>
+                            <form action=@{PostR} method="post" role="form">
+                                <div .form-group>
+                                    <label>Title
+                                    <input .form-control name="title">
+                                    <p class="help-block">Example block-level help text here.
+                                <div .form-group>
+                                    <label>Content
+                                    <textarea class="form-control" rows="3" name="content">
+                                <button type="submit" class="btn btn-default">Submit Button

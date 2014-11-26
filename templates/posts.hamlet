@@ -1,0 +1,25 @@
+<div #page-wrapper>
+    <div .row>
+        <div .col-lg-12>
+            <h1 class="page-header">All Posts
+
+    <div .row>
+        <div .col-lg-12>
+            <div class="panel panel-default">
+                <div class="panel-heading">Posts
+
+                <div .panel-body>
+                   <div class="table-responsive">
+                       <table .table .table-striped .table-bordered .table-hover>
+                           <thead>
+                               <tr>
+                                   <th>ID
+                                   <th>Title
+                                   <th>Content
+                           <tbody>
+                               $forall Entity postid (Post title content) <- posts
+                                   <tr class="odd gradeX">
+                                        <td>#{toPathPiece postid}
+                                        <td>
+                                            <a href=@{PostShowR postid}>#{title}
+                                        <td>#{content}

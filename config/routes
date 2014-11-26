@@ -6,4 +6,9 @@
 
 / HomeR GET POST
 
-/posts PostR GET POST
+
+/post          PostR GET POST
+/post/#PostId  PostShowR GET
+
+
+/posts  PostsR GET
