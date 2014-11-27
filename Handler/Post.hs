@@ -4,7 +4,6 @@ import Import
 import qualified Data.Text as T
 import Text.Hamlet (hamletFile)
 
-
 adminLayout widget = do
         master <- getYesod
         mmsg   <- getMessage 
@@ -26,15 +25,13 @@ postPostR = do
                                     <$> ireq textField "title"
                                     <*> ireq textField "content"
 
-             runDB $ insert post
+             postId <- runDB $ insert post
 
-             adminLayout $ do
-               [whamlet| #{show post} |]
+             redirect $ PostsR
 
 getPostsR :: Handler Html
 getPostsR = do
              posts <- runDB $ selectList [] [Desc PostId]
---              posts <- runDB $ get post
              adminLayout $ do 
                $(widgetFile "posts")
 
@@ -46,3 +43,8 @@ getPostShowR postId = do
                                    [whamlet| Nothing |]
                     Just post -> defaultLayout $ do
                                    [whamlet| #{postContent post} |]
+
+deletePostShowR :: PostId -> Handler Value
+deletePostShowR postId = do
+   runDB $ delete postId
+   return $ object [ "name" .= ("asd"::String), "age"  .= ("1"::String)]

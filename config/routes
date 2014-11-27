@@ -7,8 +7,8 @@
 / HomeR GET POST
 
 
-/post          PostR GET POST
-/post/#PostId  PostShowR GET
+/post          PostR GET POST 
+/post/#PostId  PostShowR GET DELETE
 
 
 /posts  PostsR GET

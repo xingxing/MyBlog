@@ -16,6 +16,7 @@
                                    <th>ID
                                    <th>Title
                                    <th>Content
+                                   <th>Operation
                            <tbody>
                                $forall Entity postid (Post title content) <- posts
                                    <tr class="odd gradeX">
@@ -23,3 +24,5 @@
                                         <td>
                                             <a href=@{PostShowR postid}>#{title}
                                         <td>#{content}
+                                        <td>
+                                            <a .delete-post action=@{PostShowR postid} href="javascript:void(0)">删除
