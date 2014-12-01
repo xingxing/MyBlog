@@ -86,7 +86,10 @@ instance Yesod App where
     -- Routes not requiring authentication.
     isAuthorized (AuthR _) _ = return Authorized
     isAuthorized FaviconR _ = return Authorized
-    isAuthorized RobotsR _ = return Authorized
+    isAuthorized RobotsR _ = return  Authorized
+
+    isAuthorized PostsR _ = isLoginedIn
+    isAuthorized (PostShowR _) _ = isLoginedIn
     -- Default to Authorized for now.
     isAuthorized _ _ = return Authorized
 
@@ -111,6 +114,13 @@ instance Yesod App where
         development || level == LevelWarn || level == LevelError
 
     makeLogger = return . appLogger
+
+isLoginedIn = do 
+  mu <- maybeAuth
+  return $
+         case mu of
+           Just uid ->  Authorized
+           _        ->  AuthenticationRequired
 
 -- How to run database actions.
 instance YesodPersist App where

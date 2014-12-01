@@ -3,6 +3,9 @@ module Handler.Post where
 import Import
 import qualified Data.Text as T
 import Text.Hamlet (hamletFile)
+import           Yesod.Auth
+import           Yesod.Auth.Email
+
 
 adminLayout widget = do
         master <- getYesod
@@ -16,8 +19,8 @@ getPostR = adminLayout $ do
              setTitle "Write New Post"
              $(widgetFile "new_post")
            
-instance Show Post where
-    show (Post title content) =  T.unpack $ T.concat ["标题:"::Text, title, "  内容"::Text, content]
+-- instance Show Post where
+--     show (Post title content) =  T.unpack $ T.concat ["标题:"::Text, title, "  内容"::Text, content]
 
 postPostR :: Handler Html
 postPostR = do 
@@ -48,3 +51,8 @@ deletePostShowR :: PostId -> Handler Value
 deletePostShowR postId = do
    runDB $ delete postId
    return $ object [ "name" .= ("asd"::String), "age"  .= ("1"::String)]
+
+{-------------------------------------------------------------------------------------------------------}
+{-                                       授权                                                          -}
+{-------------------------------------------------------------------------------------------------------}
+
